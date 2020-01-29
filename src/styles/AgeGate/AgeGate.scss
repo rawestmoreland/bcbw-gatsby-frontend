@@ -1,0 +1,100 @@
+@import url('../fonts.css');
+
+$ubuntu: 'Ubuntu', sans-serif;
+$color-gold: #bdac74;
+$color-background: rgb(51, 44, 44);
+
+.age-gate {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  flex-direction: column;
+  height: 100vh;
+  left: 0;
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  transition-delay: 800ms;
+  width: 100vw;
+  z-index: 2000;
+  background-color: $color-background;
+  outline: solid $color-gold 1px;
+  outline-offset: -1.6rem;
+  opacity: 99%;
+  @media (max-width: 768px) {
+    outline: none;
+  }
+}
+
+.age-screen {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute !important;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.age-container {
+  max-width: 34rem;
+  padding: 2rem;
+  width: 100%;
+  z-index: 2;
+}
+
+.title-wrapper {
+  max-width: 100%;
+  height: auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.prompt {
+  .prompt-text {
+    font-family: $ubuntu;
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+    color: whitesmoke;
+    margin-top: 3.1rem;
+    margin-bottom: 2.8rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+}
+
+.prompt-button {
+  flex: 1;
+  font-family: $ubuntu;
+  font-size: 1.1rem;
+  font-weight: bold;
+  justify-content: center;
+  margin: 0 0.4rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.yes-button {
+  background-color: #191a1f;
+  border: none;
+  color: whitesmoke;
+  &:focus {
+    outline: none;
+  }
+}
+
+.no-button {
+  background-color: transparent;
+  border: none;
+  color: whitesmoke;
+  border: solid #191a1f 0.3rem;
+}

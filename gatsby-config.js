@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Bayou City Beer Works`,
+    description: `Welcome to Bayou City Beer Works. We're making the best beer in the best city. We love Houston`,
+    author: `Richard Westmoreland`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,6 +25,41 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        // I have created a dummy site for us to use with the plugins we discussed
+        baseUrl: 'localhost:8888',
+        protocol: 'http',
+        hostingWPCOM: false,
+        // We will be using some advanced custom fields
+        useACF: true,
+        // acfOptionPageIds: [],
+        verboseOutput: false,
+        perPage: 100,
+        // searchAndReplaceContentUrls: {
+        //   sourceUrl: "https://www.using-wordpress-with-gatsby.iamtimsmith.com",
+        //   replacementUrl: "https://localhost:8000",
+        // },
+        // Set how many simultaneous requests are sent at once.
+        concurrentRequests: 10,
+        includedRoutes: [
+          '**/categories',
+          '**/posts',
+          '**/beer',
+          '**/pages',
+          '**/media',
+          '**/tags',
+          '**/taxonomies',
+          '**/users',
+          '**/comments',
+        ],
+        excludedRoutes: [],
+        normalizer: function({ entities }) {
+          return entities
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
