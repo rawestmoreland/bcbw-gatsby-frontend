@@ -31,7 +31,7 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         // I have created a dummy site for us to use with the plugins we discussed
-        baseUrl: 'localhost:8888',
+        baseUrl: 'www.bayoucitybeerworks.com/wordpress',
         protocol: 'http',
         hostingWPCOM: false,
         // We will be using some advanced custom fields
@@ -50,6 +50,7 @@ module.exports = {
           '**/posts',
           '**/beer',
           '**/pages',
+          '**/menus',
           '**/media',
           '**/tags',
           '**/taxonomies',
