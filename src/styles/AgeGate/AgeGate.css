@@ -1,34 +1,33 @@
-@import url("../fonts.css");
+@import url('../fonts.css');
 .age-gate {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   height: 100vh;
   left: 0;
   overflow: scroll;
   position: fixed;
   top: 0;
   -webkit-transition-delay: 800ms;
-          transition-delay: 800ms;
+  transition-delay: 800ms;
   width: 100vw;
   z-index: 2000;
   background-color: #332c2c;
   outline: solid #bdac74 1px;
   outline-offset: -1.6rem;
-  opacity: 99%;
 }
 
 @media (max-width: 768px) {
@@ -66,7 +65,7 @@
 }
 
 .prompt .prompt-text {
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1.8rem;
   letter-spacing: 0.5rem;
   color: whitesmoke;
@@ -83,14 +82,14 @@
 
 .prompt-button {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  font-family: "Ubuntu", sans-serif;
+  -ms-flex: 1;
+  flex: 1;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1.1rem;
   font-weight: bold;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 0 0.4rem;
   padding: 1rem 2rem;
   text-transform: uppercase;
