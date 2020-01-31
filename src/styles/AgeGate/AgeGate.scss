@@ -1,8 +1,5 @@
 @import url('../fonts.css');
-
-$ubuntu: 'Ubuntu', sans-serif;
-$color-gold: #bdac74;
-$color-background: rgb(51, 44, 44);
+@import '../variables.scss';
 
 .age-gate {
   display: flex;

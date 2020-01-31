@@ -1,0 +1,69 @@
+@import '../variables.scss';
+@import url('../fonts.css');
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100vw;
+  height: 6rem;
+  background: $color-background;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  img {
+    height: 4rem;
+  }
+}
+
+.menu-wrapper {
+  width: 100%;
+  height: 100%;
+  nav.main-nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      list-style: none;
+      li {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.3rem;
+        letter-spacing: 0.2rem;
+        color: white;
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.social-icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  img {
+    height: 1rem;
+    width: auto;
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+}

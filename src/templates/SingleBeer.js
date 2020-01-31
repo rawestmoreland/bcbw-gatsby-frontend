@@ -7,8 +7,8 @@ const SingleBeerTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title={data.wordpressAcfBeer.beer_name}
-        description={data.wordpressAcfBeer.style}
+        title={data.wordpressAcfBeer.acf.beer_name}
+        description={data.wordpressAcfBeer.acf.style}
       ></SEO>
     </Layout>
   )
