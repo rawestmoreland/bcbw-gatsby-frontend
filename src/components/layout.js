@@ -10,6 +10,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { CookiesProvider } from 'react-cookie'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/layout.css'
 
 import Header from './header'

@@ -1,0 +1,60 @@
+@import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
+@import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
+.hero-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  margin-top: -6rem;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-image: url("../../images/800px-MapHouston1913.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.hero-cover {
+  background-color: #333f4e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  opacity: 75%;
+}
+
+.hero-logo-wrapper {
+  max-width: 40rem;
+  width: 90%;
+  text-align: center;
+  border-top: 3px solid #bdac74;
+  border-bottom: 3px solid #bdac74;
+  z-index: 3;
+}
+
+.hero-logo {
+  color: #bdac74;
+  font-size: 4rem;
+  font-family: 'Rokkitt';
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+/*# sourceMappingURL=home.css.map */

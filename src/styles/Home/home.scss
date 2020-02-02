@@ -1,0 +1,57 @@
+@import '../variables.scss';
+@import '../fonts.css';
+
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  margin-top: -6rem;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-image: url('../../images/800px-MapHouston1913.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.hero-cover {
+  background-color: $color-darkBlue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  opacity: 75%;
+}
+
+.hero-logo-wrapper {
+  max-width: 40rem;
+  width: 90%;
+  text-align: center;
+  border-top: 3px solid $color-gold;
+  border-bottom: 3px solid $color-gold;
+  z-index: 3;
+  @media (max-width: 991px) {
+    //width: 18rem;
+  }
+}
+
+.hero-logo {
+  color: $color-gold;
+  font-size: 4rem;
+  font-family: 'Rokkitt';
+  letter-spacing: 0.2rem;
+  text-align: center;
+  @media (max-width: 991px) {
+    //font-size: 2rem;
+  }
+}
