@@ -51,7 +51,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   // Create a page for each beer
-  const OurBeers = result.data.allWordpressAcfBeer.edges
+  const OurBeers = result.data.allWordpressWpBeer.edges
   OurBeers.forEach(beer => {
     createPage({
       path: `/beer/${beer.node.slug}`,
