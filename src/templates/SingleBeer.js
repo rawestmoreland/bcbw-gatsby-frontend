@@ -9,7 +9,7 @@ const SingleBeerTemplate = ({ data }) => {
       <SEO
         title={data.wordpressAcfBeer.acf.beer_name}
         description={data.wordpressAcfBeer.acf.style}
-      ></SEO>
+      />
     </Layout>
   )
 }

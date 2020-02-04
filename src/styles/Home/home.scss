@@ -16,7 +16,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
   background-image: url('../../images/800px-MapHouston1913.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,5 +53,34 @@
   text-align: center;
   @media (max-width: 991px) {
     //font-size: 2rem;
+  }
+}
+
+.taproom-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.taproom-logo-wrapper {
+  margin: 0 20px;
+  padding: 20px;
+  border: 3px solid $color-gold;
+}
+
+.taproom-logo {
+  font-family: 'Rokkitt';
+  color: $color-gold;
+  font-size: 8vw;
+}
+
+.business-hours {
+  color: grey;
+  font-size: 16px;
+  tr.mbhi-is-current {
+    color: white;
+  }
+  td {
+    padding: 5px;
   }
 }

@@ -3,7 +3,7 @@
 
 .site-header {
   display: flex;
-  background-color: $color-background;
+  background-color: transparent;
   position: sticky;
   top: 0;
   left: 0;
@@ -22,6 +22,9 @@
   padding: 2rem;
   justify-content: center;
   align-items: center;
+  &:hover {
+    text-decoration: none;
+  }
   @media (max-width: 991px) {
     left: 50%;
     top: 50%;

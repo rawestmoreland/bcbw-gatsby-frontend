@@ -1,9 +1,10 @@
 @import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
+@import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
 .site-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #332c2c;
+  background-color: transparent;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -36,6 +37,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.logo-wrap:hover {
+  text-decoration: none;
 }
 
 @media (max-width: 991px) {

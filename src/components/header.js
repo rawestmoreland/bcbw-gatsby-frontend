@@ -1,27 +1,16 @@
 import PropTypes from 'prop-types'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
-  Container,
-  Navbar,
-  NavbarBrand,
-  Nav,
-  NavbarToggler,
-  NavItem,
-  NavLink,
-  NavbarText,
-  Collapse,
   UncontrolledDropdown,
   DropdownMenu,
   DropdownItem,
   DropdownToggle,
 } from 'reactstrap'
-import Logo from '../images/bcbw_logo.png'
-import Icon from '../images/gatsby-icon.png'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link, useStaticQuery } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import '../styles/Nav/nav.css'
 
