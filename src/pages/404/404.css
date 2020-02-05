@@ -1,0 +1,13 @@
+@import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
+@import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
+.not-found-text {
+  font-family: 'Rokkitt';
+  color: #bdac74;
+}
+
+.error-description-text {
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.2rem;
+}
+/*# sourceMappingURL=404.css.map */

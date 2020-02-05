@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAP,wEAAO;ACAP,OAAO,CAAP,wEAAO;ADGP,AAAA,eAAe,CAAC;EACd,WAAW,EAAE,SAAS;EACtB,KAAK,ECFM,OAAO;CDGnB;;AAED,AAAA,uBAAuB,CAAC;EACtB,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,oBAAoB;EACjC,cAAc,EAAE,MAAM;CACvB",
+    "sources": [
+        "404.scss",
+        "../../styles/variables.scss"
+    ],
+    "names": [],
+    "file": "404.css"
+}

@@ -1,0 +1,13 @@
+@import '../../styles/fonts.css';
+@import '../../styles/variables.scss';
+
+.not-found-text {
+  font-family: 'Rokkitt';
+  color: $color-gold;
+}
+
+.error-description-text {
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.2rem;
+}

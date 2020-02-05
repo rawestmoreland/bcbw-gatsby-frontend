@@ -15,6 +15,9 @@
   @media (max-width: 991px) {
     height: 6rem;
   }
+  a {
+    text-decoration: none;
+  }
 }
 
 .logo-wrap {
@@ -145,6 +148,8 @@
   top: 1rem !important;
   transform: translate(-50%, 50%) !important;
   transition: max-height 0.2s;
+  outline: none;
+  border: none;
   &::before {
     width: 0;
     height: 0;
@@ -162,7 +167,7 @@
     position: relative !important;
     width: 100vw !important;
     max-height: 1000px !important;
-    top: -2rem !important;
+    top: -3rem !important;
     border-radius: 0 !important;
     overflow: hidden;
   }
@@ -172,6 +177,10 @@
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  &:hover {
+    background-color: transparent;
+    text-decoration: none;
+  }
   @media (max-width: 991px) {
   }
 }

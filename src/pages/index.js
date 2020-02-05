@@ -32,10 +32,12 @@ const IndexPage = ({ data }) => {
               </div>
             </div>
             <div className="col-md-6 col-lg-5 d-flex justify-content-center align-items-center">
-              <div
-                className="business-hours"
-                dangerouslySetInnerHTML={{ __html: hours }}
-              />
+              <div className="container d-flex justify-content-center p-1">
+                <div
+                  className="business-hours"
+                  dangerouslySetInnerHTML={{ __html: hours }}
+                />
+              </div>
             </div>
           </div>
         </div>

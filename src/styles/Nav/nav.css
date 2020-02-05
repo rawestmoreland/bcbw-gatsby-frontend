@@ -26,6 +26,10 @@
   }
 }
 
+.site-header a {
+  text-decoration: none;
+}
+
 .logo-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,6 +215,8 @@
           transform: translate(-50%, 50%) !important;
   -webkit-transition: max-height 0.2s;
   transition: max-height 0.2s;
+  outline: none;
+  border: none;
 }
 
 .dropdown-menu-center::before {
@@ -233,7 +239,7 @@
     position: relative !important;
     width: 100vw !important;
     max-height: 1000px !important;
-    top: -2rem !important;
+    top: -3rem !important;
     border-radius: 0 !important;
     overflow: hidden;
   }
@@ -243,6 +249,11 @@
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+}
+
+.dropdown-item:hover {
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .social-sidebar-toggle {

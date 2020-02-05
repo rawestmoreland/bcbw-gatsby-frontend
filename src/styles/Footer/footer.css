@@ -1,0 +1,98 @@
+@import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
+@import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
+.footer-wrapper {
+  position: relative;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70%;
+  width: 100%;
+  background-color: #1e242c;
+}
+
+.footer-main {
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.2rem;
+  color: white;
+  padding: 4rem 0;
+}
+
+.footer-title h3 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  opacity: 0.6;
+  font-size: 15px;
+}
+
+.footer-address {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.footer-address address {
+  opacity: 0.6;
+}
+
+.footer-address a {
+  color: white;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+.footer-hours {
+  letter-spacing: normal;
+}
+
+.footer-hours table.mabel-bhi-businesshours {
+  margin: 0;
+  width: 100%;
+}
+
+.footer-hours table.mabel-bhi-businesshours tr {
+  opacity: 0.4;
+}
+
+.footer-hours table.mabel-bhi-businesshours tr.mbhi-is-current {
+  opacity: 0.75;
+}
+
+.contact-link,
+.contact-number {
+  margin-bottom: 5px;
+}
+
+.contact-link a,
+.contact-number a {
+  color: white;
+  opacity: 0.6;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.link-list {
+  list-style: none;
+}
+
+.link-list li {
+  margin-bottom: 5px;
+}
+
+.link-list a {
+  color: white;
+  opacity: 0.6;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: white;
+  opacity: 0.6;
+}
+
+.social-icons a:not(:last-child) {
+  margin-right: 1rem;
+}
+/*# sourceMappingURL=footer.css.map */

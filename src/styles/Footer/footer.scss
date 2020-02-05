@@ -1,0 +1,105 @@
+@import '../fonts.css';
+@import '../variables.scss';
+
+.footer-wrapper {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  height: 70%;
+  width: 100%;
+  background-color: $color-footerBlue;
+}
+
+// .footer-image {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   height: 100%;
+//   background-image: url('../../images/bcbw_logo.png');
+//   background-repeat: no-repeat;
+//   background-position: 50%;
+//   opacity: 0.1;
+//   background-size: 80%;
+// }
+
+.footer-main {
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.2rem;
+  color: white;
+  padding: 4rem 0;
+}
+
+.footer-title {
+  h3 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    opacity: 0.6;
+    font-size: 15px;
+  }
+}
+
+.footer-address {
+  font-size: 14px;
+  opacity: 0.6;
+  address {
+    opacity: 0.6;
+  }
+  a {
+    color: white;
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+}
+
+.footer-hours {
+  letter-spacing: normal;
+  table {
+    &.mabel-bhi-businesshours {
+      margin: 0;
+      width: 100%;
+      tr {
+        opacity: 0.4;
+        &.mbhi-is-current {
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+}
+
+.contact-link,
+.contact-number {
+  a {
+    color: white;
+    opacity: 0.6;
+    text-decoration: underline;
+    font-size: 14px;
+  }
+  margin-bottom: 5px;
+}
+
+.link-list {
+  list-style: none;
+  li {
+    margin-bottom: 5px;
+  }
+  a {
+    color: white;
+    opacity: 0.6;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+}
+
+.social-icons {
+  a {
+    color: white;
+    opacity: 0.6;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
