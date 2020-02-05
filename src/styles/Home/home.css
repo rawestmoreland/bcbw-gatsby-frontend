@@ -33,12 +33,12 @@
 
 .hero-cover {
   background-color: #333f4e;
+  opacity: 0.75;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 100vh;
-  opacity: 75%;
+  height: 100%;
 }
 
 .hero-logo-wrapper {

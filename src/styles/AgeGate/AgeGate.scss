@@ -1,8 +1,9 @@
-@import url('../fonts.css');
+@import '../fonts.css';
 @import '../variables.scss';
 
 .age-gate {
   display: flex;
+  opacity: 0.99;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -19,10 +20,13 @@
   background-color: $color-background;
   outline: solid $color-gold 1px;
   outline-offset: -1.6rem;
-  opacity: 99%;
   @media (max-width: 768px) {
     outline: none;
   }
+}
+
+.aged {
+  display: none;
 }
 
 .age-screen {
@@ -94,4 +98,7 @@
   border: none;
   color: whitesmoke;
   border: solid #191a1f 0.3rem;
+  &:hover {
+    text-decoration: none;
+  }
 }

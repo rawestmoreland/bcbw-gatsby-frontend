@@ -1,9 +1,10 @@
-@import url("../fonts.css");
+@import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
 @import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
 .age-gate {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 0.99;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -29,13 +30,16 @@
   background-color: #332c2c;
   outline: solid #bdac74 1px;
   outline-offset: -1.6rem;
-  opacity: 99%;
 }
 
 @media (max-width: 768px) {
   .age-gate {
     outline: none;
   }
+}
+
+.aged {
+  display: none;
 }
 
 .age-screen {
@@ -113,5 +117,9 @@
   border: none;
   color: whitesmoke;
   border: solid #191a1f 0.3rem;
+}
+
+.no-button:hover {
+  text-decoration: none;
 }
 /*# sourceMappingURL=AgeGate.css.map */

@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useCookies } from 'react-cookie'
 import '../styles/AgeGate/AgeGate.css'
 import Logo from '../images/bcbw_logo.png'
 
 const AgeGate = () => {
   const [cookies, setCookie] = useCookies(['aged'])
+  const [aged, setAged] = useState(false)
+
+  useEffect(() => {
+    setAged(cookies.aged || false)
+  })
 
   // When user clicks yes - age gate disappears
   const ageClick = () => {
@@ -16,15 +21,14 @@ const AgeGate = () => {
     setCookie('aged', true, {
       // Expire the cookie 1 year from now
       expires: new Date(millis + 31536000000),
+      // Available on all pages
+      path: '/',
     })
-    console.log(cookies.aged)
+    setAged(cookies.aged)
   }
 
   return (
-    <div
-      className="age-gate"
-      style={cookies.aged ? { display: 'none' } : { display: 'flex' }}
-    >
+    <div className={`age-gate ${aged ? 'aged' : null}`}>
       <div className="age-screen"></div>
       <div className="age-container">
         <div className="title-wrapper">
