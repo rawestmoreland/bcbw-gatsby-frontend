@@ -66,6 +66,11 @@
           opacity: 0.75;
         }
       }
+      td {
+        &:first-child {
+          padding-right: 1rem;
+        }
+      }
     }
   }
 }

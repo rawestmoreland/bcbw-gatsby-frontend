@@ -59,6 +59,10 @@
   opacity: 0.75;
 }
 
+.footer-hours table.mabel-bhi-businesshours td:first-child {
+  padding-right: 1rem;
+}
+
 .contact-link,
 .contact-number {
   margin-bottom: 5px;
