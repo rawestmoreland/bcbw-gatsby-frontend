@@ -11,6 +11,21 @@ const ContactPage = () => {
     setState({ ...state, [e.target.state]: e.target.value })
   }
 
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch(error => alert(error))
+  }
+
   return (
     <Layout>
       <SEO
@@ -31,6 +46,7 @@ const ContactPage = () => {
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
             <p hidden>
@@ -48,11 +64,11 @@ const ContactPage = () => {
               </div>
               <div className="contact-input-row row">
                 <div className="contact-input-wrapper col-6 col-md-4 d-flex flex-column">
-                  <input type="text" name="firstName" />
+                  <input type="text" name="firstName" onChange={handleChange} />
                   <label>first</label>
                 </div>
                 <div className="contact-input-wrapper col-6 col-md-4 d-flex flex-column">
-                  <input type="text" name="lastName" />
+                  <input type="text" name="lastName" onChange={handleChange} />
                   <label>last</label>
                 </div>
               </div>
@@ -66,7 +82,7 @@ const ContactPage = () => {
               </div>
               <div className="contact-input-row row">
                 <div className="contact-input-wrapper col-sm-12 col-md-8 d-flex flex-column">
-                  <input type="email" name="email" />
+                  <input type="email" name="email" onChange={handleChange} />
                 </div>
               </div>
             </div>
@@ -79,7 +95,7 @@ const ContactPage = () => {
               </div>
               <div className="contact-input-row row">
                 <div className="contact-input-wrapper col-12 d-flex flex-column">
-                  <textarea name="message" />
+                  <textarea name="message" onChange={handleChange} />
                 </div>
               </div>
             </div>
