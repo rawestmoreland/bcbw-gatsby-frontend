@@ -27,8 +27,8 @@ const Layout = ({ children }) => {
   return (
     <CookiesProvider>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
+      <div id="layout-wrapper">
+        <main id="layout-children">{children}</main>
       </div>
       <Footer />
     </CookiesProvider>
