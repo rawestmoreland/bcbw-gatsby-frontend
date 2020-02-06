@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 import '../styles/contact/contact.css'
 
 const ContactPage = () => {
+  const [state, setState] = useState({})
+
+  const handleChange = e => {
+    setState({ ...state, [e.target.state]: e.target.value })
+  }
+
   return (
     <Layout>
       <SEO
@@ -21,12 +27,18 @@ const ContactPage = () => {
         </div>
         <div className="contact-form-wrapper container">
           <form
-            netlify
             name="contact"
             method="POST"
             data-netlify="true"
-            data-netlify-recaptcha="true"
+            data-netlify-honeypot="bot-field"
           >
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              <label>
+                Don't fill this out:{' '}
+                <input name="bot-field" onChange={handleChange} />
+              </label>
+            </p>
             <div className="contact-form-group-row">
               <div className="contact-top-label row">
                 <div className="container d-flex flex-row">
@@ -35,12 +47,12 @@ const ContactPage = () => {
                 </div>
               </div>
               <div className="contact-input-row row">
-                <div className="contact-input-wrapper col-6 col-md-3 d-flex flex-column">
-                  <input type="text" name="first_name" />
+                <div className="contact-input-wrapper col-6 col-md-4 d-flex flex-column">
+                  <input type="text" name="firstName" />
                   <label>first</label>
                 </div>
-                <div className="contact-input-wrapper col-6 col-md-3 d-flex flex-column">
-                  <input type="text" name="last_name" />
+                <div className="contact-input-wrapper col-6 col-md-4 d-flex flex-column">
+                  <input type="text" name="lastName" />
                   <label>last</label>
                 </div>
               </div>
@@ -53,7 +65,7 @@ const ContactPage = () => {
                 </div>
               </div>
               <div className="contact-input-row row">
-                <div className="contact-input-wrapper col-sm-12 col-md-6 d-flex flex-column">
+                <div className="contact-input-wrapper col-sm-12 col-md-8 d-flex flex-column">
                   <input type="email" name="email" />
                 </div>
               </div>
@@ -66,19 +78,14 @@ const ContactPage = () => {
                 </div>
               </div>
               <div className="contact-input-row row">
-                <div className="contact-input-wrapper col-sm-12 col-md-6 d-flex flex-column">
+                <div className="contact-input-wrapper col-12 d-flex flex-column">
                   <textarea name="message" />
                 </div>
               </div>
             </div>
-            <div className="contact-form-group row">
-              <div className="contact-input-row row">
-                <div className="container" data-netlify-recaptcha="true"></div>
-              </div>
-            </div>
             <div className="contact-form-group-row">
               <div className="contact-input-row row">
-                <div className="contact-form-submit col-sm-12">
+                <div className="contact-form-submit col-sm-12 col-md-8 col-lg-4">
                   <button>send message</button>
                 </div>
               </div>

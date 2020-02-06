@@ -65,14 +65,19 @@
   padding: 1rem 0;
 }
 
+.contact-form-submit {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
 .contact-form-submit button {
   background-color: #1e242c;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   color: whitesmoke;
-  height: 5rem;
+  height: 6rem;
   width: 100%;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
 }
 /*# sourceMappingURL=contact.css.map */

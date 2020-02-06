@@ -61,14 +61,15 @@
 }
 
 .contact-form-submit {
+  transition: all 0.2s;
   button {
     background-color: $color-footerBlue;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     color: whitesmoke;
-    height: 5rem;
+    height: 6rem;
     width: 100%;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
   }
 }
