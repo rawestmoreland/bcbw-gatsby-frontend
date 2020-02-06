@@ -21,6 +21,7 @@ const ContactPage = () => {
         </div>
         <div className="contact-form-wrapper container">
           <form
+            netlify
             name="contact"
             method="POST"
             data-netlify="true"

@@ -46,9 +46,11 @@
 }
 
 .contact-input-wrapper input {
-  height: 3rem;
+  height: 4rem;
   border: 2px solid #333f4e;
   padding: 0 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
 }
 
 .contact-input-wrapper label {
@@ -61,6 +63,8 @@
   height: 150px;
   border: 2px solid #333f4e;
   padding: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
 }
 
 .contact-form-group-row {
