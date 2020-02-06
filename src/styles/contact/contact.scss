@@ -41,6 +41,7 @@
   input {
     height: 3rem;
     border: 2px solid $color-darkBlue;
+    padding: 0 1rem;
   }
   label {
     opacity: 0.5;
@@ -50,6 +51,7 @@
   textarea {
     height: 150px;
     border: 2px solid $color-darkBlue;
+    padding: 1rem;
   }
 }
 
