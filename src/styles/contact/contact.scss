@@ -2,13 +2,10 @@
 @import '../fonts.css';
 
 .contact-wrapper {
-  height: 70vh;
   background-color: whitesmoke;
   font-family: 'Ubuntu', sans-serif;
   transition: all 0.2s;
-  @media (max-width: 762px) {
-    height: 100vh;
-  }
+  padding: 3rem 0;
 }
 
 .contact-header-wrapper {

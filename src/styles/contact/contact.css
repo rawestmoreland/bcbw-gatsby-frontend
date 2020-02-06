@@ -1,17 +1,11 @@
 @import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
 @import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
 .contact-wrapper {
-  height: 70vh;
   background-color: whitesmoke;
   font-family: 'Ubuntu', sans-serif;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-}
-
-@media (max-width: 762px) {
-  .contact-wrapper {
-    height: 100vh;
-  }
+  padding: 3rem 0;
 }
 
 .contact-header-wrapper {
