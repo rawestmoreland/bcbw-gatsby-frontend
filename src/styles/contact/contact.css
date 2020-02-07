@@ -1,6 +1,7 @@
 @import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
 @import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
 .contact-wrapper {
+  min-height: 60vh;
   background-color: whitesmoke;
   font-family: 'Ubuntu', sans-serif;
   -webkit-transition: all 0.2s;

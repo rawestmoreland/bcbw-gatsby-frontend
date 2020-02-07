@@ -5,25 +5,25 @@ import SEO from '../components/seo'
 import '../styles/contact/contact.css'
 
 const ContactPage = () => {
-  const [state, setState] = useState({})
+  const [state, setState] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
+  })
+  const [verified, setVerified] = useState(false)
 
   const handleChange = e => {
-    setState({ ...state, [e.target.state]: e.target.value })
+    setState({ ...state, [e.target.name]: e.target.value })
+    console.log(state)
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch(error => alert(error))
+    if (verified) {
+    } else {
+      alert('Prove that you are human')
+    }
   }
 
   return (
@@ -41,20 +41,7 @@ const ContactPage = () => {
           </div>
         </div>
         <div className="contact-form-wrapper container">
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <p hidden>
-              <label>
-                Don't fill this out:{' '}
-                <input name="bot-field" onChange={handleChange} />
-              </label>
-            </p>
+          <form name="contact" method="POST" onSubmit={handleSubmit}>
             <div className="contact-form-group-row">
               <div className="contact-top-label row">
                 <div className="container d-flex flex-row">
