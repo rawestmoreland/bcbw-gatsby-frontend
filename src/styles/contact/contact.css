@@ -46,6 +46,11 @@
   padding: 0 1rem;
   font-size: 1.1rem;
   letter-spacing: 0.2rem;
+  width: 100%;
+}
+
+.contact-input-wrapper input:focus {
+  outline: 0;
 }
 
 .contact-input-wrapper label {
@@ -54,12 +59,20 @@
   margin-bottom: 0;
 }
 
+.contact-input-wrapper span {
+  color: red;
+}
+
 .contact-input-wrapper textarea {
   height: 150px;
   border: 2px solid #333f4e;
   padding: 1rem;
   font-size: 1.1rem;
   letter-spacing: 0.2rem;
+}
+
+.contact-input-wrapper textarea:focus {
+  outline: 0;
 }
 
 .contact-form-group-row {

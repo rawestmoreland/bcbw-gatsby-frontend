@@ -42,11 +42,18 @@
     padding: 0 1rem;
     font-size: 1.1rem;
     letter-spacing: 0.2rem;
+    width: 100%;
+    &:focus {
+      outline: 0;
+    }
   }
   label {
     opacity: 0.5;
     text-transform: uppercase;
     margin-bottom: 0;
+  }
+  span {
+    color: red;
   }
   textarea {
     height: 150px;
@@ -54,6 +61,9 @@
     padding: 1rem;
     font-size: 1.1rem;
     letter-spacing: 0.2rem;
+    &:focus {
+      outline: 0;
+    }
   }
 }
 

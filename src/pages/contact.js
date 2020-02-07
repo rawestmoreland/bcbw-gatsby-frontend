@@ -1,11 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, createRef } from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-
 import '../styles/contact/contact.css'
+import { Form, FormGroup } from 'reactstrap'
+import TextValidator from '../components/validator/TextValidator'
+import { ValidatorForm } from 'react-form-validator-core'
+import ReCaptcha from 'react-google-recaptcha'
 
 const ContactPage = () => {
+  const form = useRef(null)
+  const recaptchaRef = createRef()
+
   const [state, setState] = useState({
+    errors: {},
     firstName: '',
     lastName: '',
     email: '',
@@ -15,15 +22,16 @@ const ContactPage = () => {
 
   const handleChange = e => {
     setState({ ...state, [e.target.name]: e.target.value })
-    console.log(state)
+  }
+
+  const captchaChange = () => {
+    setVerified(recaptchaRef.current.getValue())
+    console.log('verified')
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-    if (verified) {
-    } else {
-      alert('Prove that you are human')
-    }
+    alert('form submitted')
   }
 
   return (
@@ -41,7 +49,7 @@ const ContactPage = () => {
           </div>
         </div>
         <div className="contact-form-wrapper container">
-          <form name="contact" method="POST" onSubmit={handleSubmit}>
+          <ValidatorForm ref={form} onSubmit={handleSubmit}>
             <div className="contact-form-group-row">
               <div className="contact-top-label row">
                 <div className="container d-flex flex-row">
@@ -51,12 +59,25 @@ const ContactPage = () => {
               </div>
               <div className="contact-input-row row">
                 <div className="contact-input-wrapper col-6 col-md-4 d-flex flex-column">
-                  <input type="text" name="firstName" onChange={handleChange} />
+                  <TextValidator
+                    onChange={handleChange}
+                    name="firstName"
+                    value={state.firstName}
+                    validators={['required', 'matchRegexp:[a-zA-ZÀ-ÿ]$']}
+                    errorMessages={['This field is required', 'Letters only']}
+                  />
                   <label>first</label>
                 </div>
                 <div className="contact-input-wrapper col-6 col-md-4 d-flex flex-column">
-                  <input type="text" name="lastName" onChange={handleChange} />
+                  <TextValidator
+                    onChange={handleChange}
+                    name="lastName"
+                    value={state.lastName}
+                    validators={['required', 'matchRegexp:[a-zA-ZÀ-ÿ]$']}
+                    errorMessages={['This field is required', 'Letters only']}
+                  />
                   <label>last</label>
+                  <span>{state.errors['lastName']}</span>
                 </div>
               </div>
             </div>
@@ -69,7 +90,17 @@ const ContactPage = () => {
               </div>
               <div className="contact-input-row row">
                 <div className="contact-input-wrapper col-sm-12 col-md-8 d-flex flex-column">
-                  <input type="email" name="email" onChange={handleChange} />
+                  <TextValidator
+                    onChange={handleChange}
+                    name="email"
+                    value={state.email}
+                    validators={['required', 'isEmail']}
+                    errorMessages={[
+                      'This field is required',
+                      'Email is not valid',
+                    ]}
+                  />
+                  <span>{state.errors['email']}</span>
                 </div>
               </div>
             </div>
@@ -89,11 +120,16 @@ const ContactPage = () => {
             <div className="contact-form-group-row">
               <div className="contact-input-row row">
                 <div className="contact-form-submit col-sm-12 col-md-8 col-lg-4">
-                  <button>send message</button>
+                  <button type="submit">send message</button>
                 </div>
               </div>
             </div>
-          </form>
+          </ValidatorForm>
+          <ReCaptcha
+            ref={recaptchaRef}
+            siteKey="6LeRhNYUAAAAAB3InRGsmZ8aRFGyzMfxF275LkPS"
+            onChange={captchaChange}
+          />
         </div>
       </div>
     </Layout>
