@@ -1,9 +1,7 @@
 @import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
 @import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
 .age-gate {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   opacity: 0.99;
   text-align: center;
   -webkit-box-align: center;
@@ -39,7 +37,9 @@
 }
 
 .aged {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .age-screen {

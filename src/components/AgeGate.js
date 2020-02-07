@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useCookies } from 'react-cookie'
 import '../styles/AgeGate/AgeGate.css'
 import Logo from '../images/bcbw_logo.png'
+import { bool } from 'prop-types'
 
 const AgeGate = () => {
   const [cookies, setCookie] = useCookies(['aged'])
-  const [aged, setAged] = useState(false)
+  const [aged, setAged] = useState()
 
   useEffect(() => {
     setAged(cookies.aged || false)
@@ -28,7 +29,7 @@ const AgeGate = () => {
   }
 
   return (
-    <div className={`age-gate ${aged ? 'aged' : null}`}>
+    <div className={`age-gate ${aged === false ? 'aged' : null}`}>
       <div className="age-screen"></div>
       <div className="age-container">
         <div className="title-wrapper">

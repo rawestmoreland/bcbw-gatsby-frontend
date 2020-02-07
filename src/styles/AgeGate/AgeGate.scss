@@ -2,7 +2,7 @@
 @import '../variables.scss';
 
 .age-gate {
-  display: flex;
+  display: none;
   opacity: 0.99;
   text-align: center;
   align-items: center;
@@ -26,7 +26,7 @@
 }
 
 .aged {
-  display: none;
+  display: flex;
 }
 
 .age-screen {
