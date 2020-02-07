@@ -1,15 +1,14 @@
-import React, { useState, useRef, createRef } from 'react'
+import React, { useState, useRef } from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import '../styles/contact/contact.css'
 import { Form, FormGroup } from 'reactstrap'
 import TextValidator from '../components/validator/TextValidator'
 import { ValidatorForm } from 'react-form-validator-core'
-import ReCaptcha from 'react-google-recaptcha'
+import ReCAPTCHA from 'react-recaptcha'
 
 const ContactPage = () => {
   const form = useRef(null)
-  const recaptchaRef = createRef()
 
   const [state, setState] = useState({
     errors: {},
@@ -24,14 +23,19 @@ const ContactPage = () => {
     setState({ ...state, [e.target.name]: e.target.value })
   }
 
-  const captchaChange = () => {
-    setVerified(recaptchaRef.current.getValue())
-    console.log('verified')
-  }
-
   const handleSubmit = e => {
     e.preventDefault()
-    alert('form submitted')
+    if (verified) {
+      alert('form submitted')
+    } else {
+      alert("Please prove to us you're human")
+    }
+  }
+
+  const verifyCallback = response => {
+    if (response) {
+      setVerified(true)
+    }
   }
 
   return (
@@ -117,6 +121,11 @@ const ContactPage = () => {
                 </div>
               </div>
             </div>
+            <ReCAPTCHA
+              sitekey={process.env.GATSBY_RECAPTCHA}
+              render="explicit"
+              verifyCallback={verifyCallback}
+            />
             <div className="contact-form-group-row">
               <div className="contact-input-row row">
                 <div className="contact-form-submit col-sm-12 col-md-8 col-lg-4">
@@ -125,11 +134,6 @@ const ContactPage = () => {
               </div>
             </div>
           </ValidatorForm>
-          <ReCaptcha
-            ref={recaptchaRef}
-            siteKey="6LeRhNYUAAAAAB3InRGsmZ8aRFGyzMfxF275LkPS"
-            onChange={captchaChange}
-          />
         </div>
       </div>
     </Layout>

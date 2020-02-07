@@ -1,6 +1,10 @@
 @import '../../styles/fonts.css';
 @import '../../styles/variables.scss';
 
+.main-error-wrapper {
+  height: 90vh;
+}
+
 .not-found-text {
   font-family: 'Rokkitt';
   color: $color-gold;

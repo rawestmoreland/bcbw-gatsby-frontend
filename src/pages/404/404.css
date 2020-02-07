@@ -1,5 +1,9 @@
 @import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
 @import url(/Users/richard/Desktop/wordpress/bcbw/frontend/src/styles/fonts.css);
+.main-error-wrapper {
+  height: 90vh;
+}
+
 .not-found-text {
   font-family: 'Rokkitt';
   color: #bdac74;
