@@ -9,6 +9,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { CookiesProvider } from 'react-cookie'
+import { Provider } from 'react-redux'
 
 import Header from './header'
 import Footer from './footer'

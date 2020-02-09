@@ -8,3 +8,5 @@
 
 require('bootstrap/dist/css/bootstrap.min.css')
 require('./src/styles/layout.css')
+
+export { default as wrapRootElement } from './src/state/ReduxWrapper'
