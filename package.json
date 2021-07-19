@@ -21,7 +21,7 @@
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-source-filesystem": "^2.1.40",
-    "gatsby-source-wordpress": "^3.1.58",
+    "gatsby-source-wordpress": "^4.0.8",
     "gatsby-transformer-sharp": "^2.3.7",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
